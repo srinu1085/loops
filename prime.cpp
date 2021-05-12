@@ -48,10 +48,10 @@ class prime1
 
 int main()
 {
-    int n;
-    cin>>n;
+    int n,n1;
+    cin>>n>>n1;
     prime p=prime(n);
-    prime1 p1=prime(n);
+    prime1 p1=prime(n1);
  
 
     return 0;
