@@ -2,30 +2,29 @@
 using namespace std;
 int main()
 {
-    int n,r,res=0,l=0;
+    int a,n,res=0;
     cin>>n;
-    while(n)
+    while(1)
     {
-        l+=1;
-        if(l>1000)
-        {
-            break;
-        }
-        r=n%10;
-        res=res+r*r;
+        a=n%10;
+        res=res+a*a;
         n=n/10;
-        if(n==0 && res!=1)
+        if(n==0)
         {
             n=res;
             res=0;
+            if(n>=1 && n<=9)
+            {
+                break;
+            }
         }
     }
-        if(n==1 && res==1)
-        {
-            cout<<"happy number";
-        }
-        else
-        {
-            cout<<"not happy number";
-        }
+    if(n==1)
+    {
+        cout<<"happy";
+    }
+    else
+    {
+        cout<<"not happy";
+    }
 }
